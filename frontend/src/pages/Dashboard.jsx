@@ -25,7 +25,7 @@ function Dashboard() {
   // 📥 Fetch grievances
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://grievance-backend-ppn2.onrender.com/grievances", {
+      const res = await axios.get("https://grievance-backend-ppn2.onrender.com/api/login", {
         headers: { Authorization: token }
       });
       setData(res.data);
@@ -43,7 +43,7 @@ function Dashboard() {
 
     try {
       await axios.post(
-        "https://grievance-backend-ppn2.onrender.com/grievances",
+        "https://grievance-backend-ppn2.onrender.com/api/login",
         { title, description, category },
         { headers: { Authorization: token } }
       );
@@ -62,7 +62,7 @@ function Dashboard() {
   const deleteGrievance = async (id) => {
     try {
       await axios.delete(
-        `https://grievance-backend-ppn2.onrender.com/grievances/${id}`,
+        `https://grievance-backend-ppn2.onrender.com/api/login/${id}`,
         {
           headers: { Authorization: token }
         }

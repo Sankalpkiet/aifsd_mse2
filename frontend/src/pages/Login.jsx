@@ -9,7 +9,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("https://grievance-backend-ppn2.onrender.com/login", {
+      const res = await axios.post("https://grievance-backend-ppn2.onrender.com/api/login", {
         email,
         password
       });

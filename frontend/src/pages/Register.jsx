@@ -12,7 +12,7 @@ function Register() {
   const handleRegister = async () => {
     try {
     const res = await axios.post(
-      "http://localhost:5000/api/register",
+      "https://grievance-backend-ppn2.onrender.com/register",
       { name, email, password },
       {
         headers: { "Content-Type": "application/json" },
